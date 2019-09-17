@@ -1,15 +1,16 @@
 package com.atguigu.nio;
 
+import org.junit.Test;
+
 import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.net.URL;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-
-import org.junit.Test;
 
 /*
  * 一、使用 NIO 完成网络通信的三个核心：
@@ -32,14 +33,44 @@ import org.junit.Test;
  */
 public class TestBlockingNIO {
 
+
+	@Test
+	public void test1() {
+		//
+		String url = TestBlockingNIO.class.getResource("/").toString();
+
+		System.out.println("classpath-url = " + url);
+		// url = file:/D:/workspace/java_practice/test/target/test-classes/
+
+		String path2 = this.getClass().getClassLoader().getResource(".").getPath();
+		System.out.println("classpath-url = " + path2);
+
+		String path3 = Thread.currentThread().getContextClassLoader().getResource(".").getPath();
+		System.out.println("classpath-url = " + path3);
+		URL resource = this.getClass().getResource("/");
+		System.out.println("classpath-url = " + resource);
+		URL resource2 = ClassLoader.getSystemResource("");
+		System.out.println("classpath-url = " + resource2);
+
+		URL resource3 = Thread.currentThread().getContextClassLoader().getResource("");
+		System.out.println("classpath-url = " + resource3);
+		//当前文件目录
+		URL resource1 = this.getClass().getResource("");
+		System.out.println("resource = " + resource1);
+
+
+	}
 	//客户端
 	@Test
 	public void client() throws IOException{
+
+
+
 		//1. 获取通道
 		SocketChannel sChannel = SocketChannel.open(new InetSocketAddress("127.0.0.1", 9898));
-		
-		FileChannel inChannel = FileChannel.open(Paths.get("1.jpg"), StandardOpenOption.READ);
-		
+		//String path = TestBlockingNIO.class.getClassLoader().getResource(".").getPath();
+		//FileChannel inChannel = FileChannel.open(Paths.get("D:\\workspace\\java_practice\\test\\src\\main\\java\\com\\atguigu\\nio\\1.jpg"), StandardOpenOption.READ);
+		FileChannel inChannel = FileChannel.open(Paths.get("classpath:1.jpg"), StandardOpenOption.READ);
 		//2. 分配指定大小的缓冲区
 		ByteBuffer buf = ByteBuffer.allocate(1024);
 		

@@ -54,7 +54,10 @@
             <type>pom</type>
             <scope>import</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
         <!-- spring beg -->
         <dependency>
             <groupId>org.aspectj</groupId>
@@ -195,12 +198,25 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
         </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-        </dependency>
 
     </dependencies>
 
+   <build>
+       <resources>
+           <resource>
+               <directory>${basedir}/src/main/webapp</directory>
+           </resource>
+           <resource>
+               <directory>${basedir}/src/main/resources</directory>
+           </resource>
+           <resource>
+               <directory>${basedir}/src/main/java</directory>
+               <includes>
+                   <include>**/*.jpg</include>
+               </includes>
+           </resource>
+       </resources>
+
+   </build>
 
 </project>

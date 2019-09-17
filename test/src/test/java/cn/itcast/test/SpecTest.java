@@ -10,7 +10,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.jpa.domain.JpaSort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -56,7 +55,7 @@ public class SpecTest {
             @Override
             public Predicate toPredicate(Root<Customer> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
                 //1.获取比较的属性
-                JpaSort.Path<Object> custName = root.get("custId");
+                //JpaSort.Path<Object> custName = root.get("custId");
                 //2.构造查询条件  ：    select * from cst_customer where cust_name = '传智播客'
                 /**
                  * 第一个参数：需要比较的属性（path对象）
@@ -110,7 +109,7 @@ public class SpecTest {
     public void test() {
         Specification<Customer> spec =  (r ,q ,b)->{
 
-            return b.ge
+            return null;
         };
     }
 

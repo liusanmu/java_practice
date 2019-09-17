@@ -22,8 +22,9 @@ public class CustomerDaoTest {
      */
     @Test
     public void testFindOne() {
-        Customer customer = customerDao.findOne(123);
-        System.out.println(customer);
+        //Customer customer = customerDao.findOne(ll);
+       // System.out.println(customer);
+        return;
     }
 
     /**
@@ -51,7 +52,7 @@ public class CustomerDaoTest {
 
     @Test
     public void testDelete () {
-        customerDao.delete(3l);
+       // customerDao.delete(3l);
     }
 
 
@@ -85,8 +86,8 @@ public class CustomerDaoTest {
      */
     @Test
     public void  testExists() {
-        boolean exists = customerDao.exists(4l);
-        System.out.println("id为4的客户 是否存在："+exists);
+        //boolean exists = customerDao.exists(4l);
+        //System.out.println("id为4的客户 是否存在："+exists);
     }
 
 
