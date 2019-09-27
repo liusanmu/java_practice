@@ -7,16 +7,14 @@ import org.springframework.stereotype.Component;
  * @description:
  * @create: 2019-09-27 16:39
  */
-
 @Component
-@HandlerType("1")
-public class NormalHandler extends AbstractHandler {
-
+@HandlerType("2")
+public class PromotionHandler extends AbstractHandler{
 
     @Override
     public String handle(OrderDto orderDto) {
 
-        return "处理普通订单";
+        return "处理优惠订单";
     }
 
 }
