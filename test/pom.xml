@@ -11,9 +11,9 @@
 
   <packaging>war</packaging>
 
-  <name>javaee</name>
+  <name>test</name>
   <groupId>com.java</groupId>
-  <artifactId>javaee</artifactId>
+  <artifactId>test</artifactId>
 
     <properties>
         <java.version>1.8</java.version>

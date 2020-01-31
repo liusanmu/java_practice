@@ -11,9 +11,9 @@
 
     <packaging>war</packaging>
 
-    <name>javaee</name>
+    <name>reflect_pattern</name>
     <groupId>com.java</groupId>
-    <artifactId>javaee</artifactId>
+    <artifactId>reflect_pattern</artifactId>
 
     <properties>
         <java.version>1.8</java.version>
