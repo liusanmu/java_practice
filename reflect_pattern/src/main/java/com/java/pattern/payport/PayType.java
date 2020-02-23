@@ -1,4 +1,4 @@
-package com.java.pattern.strategy.pay.payport;
+package com.java.pattern.payport;
 
 /**
  * 姑且把这个枚举当做一个常量去维护

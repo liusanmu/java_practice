@@ -1,4 +1,4 @@
-package com.java.pattern.strategy.pay;
+package com.java.pattern;
 
 /**
  * @author: lsm

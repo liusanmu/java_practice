@@ -1,7 +1,7 @@
-package com.java.pattern.strategy.pay.payport;
+package com.java.pattern.payport;
 
 
-import com.java.pattern.strategy.pay.PayState;
+import com.java.pattern.PayState;
 
 /**
  * Created by Tom on 2018/3/11.

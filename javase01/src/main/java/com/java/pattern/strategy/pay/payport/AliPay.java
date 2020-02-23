@@ -1,7 +1,6 @@
 package com.java.pattern.strategy.pay.payport;
 
 import com.java.pattern.strategy.pay.PayState;
-import com.java.pattern.strategy.pay.payport.Payment;
 
 public class AliPay implements Payment {
 

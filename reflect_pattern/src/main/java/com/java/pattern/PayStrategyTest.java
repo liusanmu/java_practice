@@ -1,6 +1,6 @@
-package com.java.pattern.strategy.pay;
+package com.java.pattern;
 
-import com.java.pattern.strategy.pay.payport.PayType;
+import com.java.pattern.payport.PayType;
 
 ;
 
